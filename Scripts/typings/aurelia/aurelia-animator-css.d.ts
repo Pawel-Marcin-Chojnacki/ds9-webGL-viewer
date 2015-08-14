@@ -11,11 +11,6 @@ declare module 'aurelia-animator-css/animator' {
 	    leave(element: any): Promise<{}>;
 	    removeClass(element: any, className: any): Promise<{}>;
 	    addClass(element: any, className: any): Promise<{}>;
-        animate(element: any, className:any , options:any): Promise<{}>;
-        runSequence(sequence:any): Promise<{}>;
-        registerEffect(effectName : string, properties: any): Promise<boolean>;
-        unregisterEffect(effectName : string): Promise<boolean>;
-        
 	}
 
 }

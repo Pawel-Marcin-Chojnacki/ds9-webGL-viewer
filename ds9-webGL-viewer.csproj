@@ -36,16 +36,84 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\aurelia\aurelia-bundle.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\core-js\core.js" />
+    <Content Include="Scripts\core-js\core.min.js" />
+    <Content Include="Scripts\core-js\library.js" />
+    <Content Include="Scripts\core-js\library.min.js" />
+    <Content Include="Scripts\core-js\shim.js" />
+    <Content Include="Scripts\core-js\shim.min.js" />
+    <Content Include="Scripts\core.min.js.map" />
+    <Content Include="Scripts\core.min.map" />
+    <Content Include="Scripts\core-js\core.min.js.map" />
+    <Content Include="Scripts\core-js\core.min.map" />
+    <Content Include="Scripts\core-js\library.min.js.map" />
+    <Content Include="Scripts\core-js\library.min.map" />
+    <Content Include="Scripts\core-js\shim.min.js.map" />
+    <Content Include="Scripts\core-js\shim.min.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\core.js" />
+    <Content Include="Scripts\core.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <None Include="Scripts\jquery\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\library.js" />
+    <Content Include="Scripts\library.min.js" />
+    <Content Include="Scripts\shim.js" />
+    <Content Include="Scripts\shim.min.js" />
+    <Content Include="Scripts\slimfits.js" />
+    <Content Include="Scripts\slimfits.min.js" />
+    <Content Include="Scripts\slimfits\slimfits.js" />
+    <Content Include="Scripts\slimfits\slimfits.min.js" />
+    <Content Include="Scripts\threejs\three.js" />
+    <Content Include="Scripts\threejs\three.min.js" />
     <Content Include="web.config" />
+    <Content Include="Scripts\library.min.js.map" />
+    <Content Include="Scripts\library.min.map" />
+    <Content Include="Scripts\shim.min.js.map" />
+    <Content Include="Scripts\shim.min.map" />
+    <Content Include="Scripts\jquery\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-animator-css.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-app-contacts.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-binding.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-bootstrapper.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-dependency-injection.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-event-aggregator.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-framework.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-history-browser.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-history.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-http-client.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-loader-default.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-loader.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-logging-console.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-logging.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-metadata.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-path.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-route-recognizer.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-skeleton-navigation.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-skeleton-plugin.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-task-queue.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-templating-binding.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-templating-resources.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-templating-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-templating.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\aurelia\aurelia-validation.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\core-js\core-js.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\dat-gui\dat-gui.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\es6.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\esri\esri.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\slimfits\slimfits.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\threejs\detector.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\threejs\three-canvasrenderer.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\threejs\three-copyshader.d.ts" />
@@ -99,7 +167,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptTarget>ES5</TypeScriptTarget>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>

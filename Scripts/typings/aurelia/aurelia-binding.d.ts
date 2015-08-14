@@ -31,30 +31,6 @@ declare module 'aurelia-binding/map-change-records' {
 	export function getChangeRecords(map: any): any[];
 
 }
-declare module 'aurelia-binding/class-list'{
-	export class ClassList{
-		constructor(elem: any);
-		item(index:any): any;
-		contains(token: any): boolean;
-		add(): void;
-		remove() : void;
-		toggle(token: any,force: boolean): boolean;
-		toString(): any;
-	}
-}
-declare module 'aurelia-binding/class-observer'{
-	export class ClassObserver{
-		element: any;
-   		doNotCache: boolean;
-   		value: any;
-    	version: any;
-		constructor(element: any);
-		getValue(): any;
-		setValue(newValue: any): void;
-		subscribe(callback: any): () => void;		
-	}
-	
-}
 declare module 'aurelia-binding/collection-observation' {
 	export class ModifyCollectionObserver {
 	    taskQueue: any;
@@ -328,8 +304,8 @@ declare module 'aurelia-binding/ast' {
 	}
 
 }
-declare module 'aurelia-binding/binding-mode' {
-	export var bindingMode: {
+declare module 'aurelia-binding/binding-modes' {
+	export const bindingMode: {
 	    oneTime: number;
 	    oneWay: number;
 	    twoWay: number;
@@ -359,7 +335,7 @@ declare module 'aurelia-binding/call-expression' {
 	    constructor(observerLocator: any, targetProperty: any, sourceExpression: any, valueConverterLookupFunction: any);
 	    createBinding(target: any): any;
 	}
-	
+
 }
 declare module 'aurelia-binding/computed-observation' {
 	export class ComputedPropertyObserver {
@@ -546,27 +522,31 @@ declare module 'aurelia-binding/property-observation' {
 	    obj: any;
 	    observers: any;
 	    observerLocator: any;
-	    callbacks: any;
-		callbackCount: any;
+	    observing: any;
 	    constructor(obj: any, observerLocator: any);
 	    subscribe(propertyObserver: any, callback: any): () => void;
-		unsubscribe(propertyObserver: any, callback: any): () => void;
 	    getObserver(propertyName: any, descriptor: any): any;
 	    handleChanges(changeRecords: any): void;
 	}
-	export class OoPropertyObserver {	 
+	export class OoPropertyObserver {
+	    owner: any;
 	    obj: any;
 	    propertyName: any;
-	    subscribe : any;
-	    constructor(obj: any, propertyName: any,subscribe: any);
+	    callbacks: any;
+	    constructor(owner: any, obj: any, propertyName: any);
 	    getValue(): any;
-	    setValue(newValue: any): void;	   	   
+	    setValue(newValue: any): void;
+	    trigger(newValue: any, oldValue: any): void;
+	    subscribe(callback: any): any;
 	}
 	export class UndefinedPropertyObserver {
 	    owner: any;
 	    obj: any;
 	    propertyName: any;
-	    callbackMap: any;	 
+	    callbackMap: any;
+	    callbacks: any;
+	    actual: any;
+	    subscription: any;
 	    constructor(owner: any, obj: any, propertyName: any);
 	    getValue(): any;
 	    setValue(newValue: any): void;
@@ -586,8 +566,6 @@ declare module 'aurelia-binding/observer-locator' {
 	    constructor(taskQueue: any, eventManager: any, dirtyChecker: any, observationAdapters: any);
 	    getObserversLookup(obj: any): any;
 	    getObserver(obj: any, propertyName: any): any;
-		getOrCreateObserversLookup(obj: any): any;
-		createObserversLookup(obj: any): any;
 	    getObservationAdapter(obj: any, propertyName: any, descriptor: any): any;
 	    createPropertyObserver(obj: any, propertyName: any): any;
 	    getArrayObserver(array: any): any;
@@ -698,7 +676,7 @@ declare module 'aurelia-binding/index' {
 	export { ObserverLocator, ObjectObservationAdapter } from 'aurelia-binding/observer-locator';
 	export { ValueConverterResource } from 'aurelia-binding/value-converter';
 	export { calcSplices } from 'aurelia-binding/array-change-records';
-	export * from 'aurelia-binding/binding-mode';
+	export * from 'aurelia-binding/binding-modes';
 	export { Parser } from 'aurelia-binding/parser';
 	export { BindingExpression } from 'aurelia-binding/binding-expression';
 	export { ListenerExpression } from 'aurelia-binding/listener-expression';
@@ -709,8 +687,7 @@ declare module 'aurelia-binding/index' {
 	export { ComputedPropertyObserver, declarePropertyDependencies } from 'aurelia-binding/computed-observation';
 	export function valueConverter(nameOrTarget: any): (target: any) => void;
 	export function computedFrom(...rest: any[]): (target: any, key: any, descriptor: any) => any;
-	export {ClassList}  from 'aurelia-binding/class-list'
-	export {ClassObserver}  from 'aurelia-binding/class-observer'
+
 }
 declare module 'aurelia-binding' {
 	export * from 'aurelia-binding/index';
