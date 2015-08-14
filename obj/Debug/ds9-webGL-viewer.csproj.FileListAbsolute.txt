@@ -1,0 +1,6 @@
+C:\Users\Paweł\Programming\ds9-webGL-viewer\obj\Debug\ds9-webGL-viewer.csprojResolveAssemblyReference.cache
+C:\Users\Paweł\Programming\ds9-webGL-viewer\bin\ds9-webGL-viewer.dll.config
+C:\Users\Paweł\Programming\ds9-webGL-viewer\bin\ds9-webGL-viewer.dll
+C:\Users\Paweł\Programming\ds9-webGL-viewer\bin\ds9-webGL-viewer.pdb
+C:\Users\Paweł\Programming\ds9-webGL-viewer\obj\Debug\ds9-webGL-viewer.dll
+C:\Users\Paweł\Programming\ds9-webGL-viewer\obj\Debug\ds9-webGL-viewer.pdb
